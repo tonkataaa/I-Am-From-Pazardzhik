@@ -1,4 +1,6 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { InfoCard } from '../../components/InfoCard';
+
 
 export default function OnBoardingScreen1() {
   return (
@@ -12,7 +14,12 @@ export default function OnBoardingScreen1() {
 
       {/* Main content */}
       <View style={styles.content}>
-        
+        <InfoCard
+          picture={''}
+          title={'Добре дошли в Аз съм от Пазарджик'}
+          subtitle={'Вашият местен градски асистент'}
+          description={'Открийте всичко важно за вашия град на едно място - събития, транспорт и местни бизнеси.'}
+        />
 
         {/* Next button */}
         <TouchableOpacity style={styles.button}>
