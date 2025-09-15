@@ -15,7 +15,7 @@ export default function OnBoardingScreen1() {
       {/* Main content */}
       <View style={styles.content}>
         <InfoCard
-          picture={''}
+          picture={'../../../../assets/e2a83b52-de37-49d0-97cb-faa8374e924a.png'}
           title={'Добре дошли в Аз съм от Пазарджик'}
           subtitle={'Вашият местен градски асистент'}
           description={'Открийте всичко важно за вашия град на едно място - събития, транспорт и местни бизнеси.'}
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 18,
-    color: '#3B82F6', // blue-500
+    color: '#3B82F6', 
     marginBottom: 16,
     textAlign: 'center',
   },
@@ -84,12 +84,12 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 16,
-    color: '#374151', // gray-700
+    color: '#374151', 
     textAlign: 'center',
   },
   button: {
     width: '100%',
-    backgroundColor: '#3B82F6', // blue-500
+    backgroundColor: '#3B82F6', 
     borderRadius: 16,
     paddingVertical: 14,
     alignItems: 'center',
