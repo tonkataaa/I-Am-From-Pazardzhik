@@ -1,8 +1,11 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 import InfoCard from '../../components/InfoCard';
 
 
 export default function OnBoardingScreen1() {
+  const navigation = useNavigation();
+  
   return (
     <View style={styles.container}>
       {/* Header */}
@@ -22,8 +25,8 @@ export default function OnBoardingScreen1() {
         />
 
         {/* Next button */}
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.txtBtn}>Напред</Text>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('OnBoardingSecond')}>
+          <Text style={styles.txtBtn}> Напред </Text>
         </TouchableOpacity>
       </View>
     </View>
