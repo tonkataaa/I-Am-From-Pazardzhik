@@ -1,5 +1,5 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import { InfoCard } from '../../components/InfoCard';
+import InfoCard from '../../components/InfoCard';
 
 
 export default function OnBoardingScreen1() {
@@ -15,7 +15,7 @@ export default function OnBoardingScreen1() {
       {/* Main content */}
       <View style={styles.content}>
         <InfoCard
-          picture={'../../../../assets/e2a83b52-de37-49d0-97cb-faa8374e924a.png'}
+          picture={require('../../../../assets/e2a83b52-de37-49d0-97cb-faa8374e924a.png')}
           title={'Добре дошли в Аз съм от Пазарджик'}
           subtitle={'Вашият местен градски асистент'}
           description={'Открийте всичко важно за вашия град на едно място - събития, транспорт и местни бизнеси.'}
@@ -23,7 +23,7 @@ export default function OnBoardingScreen1() {
 
         {/* Next button */}
         <TouchableOpacity style={styles.button}>
-          <Text>Започни</Text>
+          <Text style={styles.txtBtn}>Напред</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -93,6 +93,11 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     paddingVertical: 14,
     alignItems: 'center',
+    marginTop: 250
   },
+  txtBtn: {
+    color: 'white',
+    fontSize: 15,
+  }
 });
 
