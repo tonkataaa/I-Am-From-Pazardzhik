@@ -1,10 +1,10 @@
 import { Image, View, Text, StyleSheet } from 'react-native';
 
-export default function InfoCard({ title, subtitle, description }) {
+export default function InfoCard({ title, subtitle, description, imageSource }) {
   return (
     <View style={styles.card}>
       <Image 
-        source={require('../../../assets/e2a83b52-de37-49d0-97cb-faa8374e924a.png')}
+        source={typeof imageSource === "string" ? { uri: imageSource } : imageSource}
         style={styles.image}
       />
 
