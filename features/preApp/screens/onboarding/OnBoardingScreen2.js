@@ -29,19 +29,19 @@ export default function OnBoardingScreen2() {
 
         <View style={{ marginTop: 20, marginBottom: 30, width: '100%', alignItems: 'center' }}>
             <View style={styles.option}>
-                <FontAwesome name='calendar' size={22} color="rgba(174, 5, 208, 1)" />;
+                <FontAwesome name='calendar' size={22} color="rgba(174, 5, 208, 1)" />
                 <Text style={styles.optionText}>Календар със събития</Text>
             </View>
 
             <View style={styles.option}>
-                <FontAwesome name='map-marker' size={22} color="rgba(174, 5, 208, 1)" />;
+                <FontAwesome name='map-marker' size={22} color="rgba(174, 5, 208, 1)" />
                 <Text style={styles.optionText}>Информация за мястото и времето</Text>
             </View>
       </View>
 
             {/* Next button */}
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('OnBoardingThird')}>
-            <Text style={styles.txtBtn}> Напред </Text>
+              <Text style={styles.txtBtn}> Напред </Text>
             </TouchableOpacity>
         </View>
     </View>
