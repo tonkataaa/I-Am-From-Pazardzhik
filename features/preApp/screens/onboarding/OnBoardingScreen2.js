@@ -1,4 +1,5 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import InfoCard from '../../components/InfoCard';
 
 
@@ -23,12 +24,12 @@ export default function OnBoardingScreen2() {
 
         <View style={{ marginTop: 20, marginBottom: 30, width: '100%', alignItems: 'center' }}>
             <View style={styles.option}>
-                {/* <Icon name="calendar-outline" size={22} color="#9b59b6" /> */}
+                <FontAwesome name='calendar' size={22} color="rgba(174, 5, 208, 1)" />;
                 <Text style={styles.optionText}>Календар със събития</Text>
             </View>
 
             <View style={styles.option}>
-                {/* <Icon name="location-outline" size={22} color="#9b59b6" /> */}
+                <FontAwesome name='map-marker' size={22} color="rgba(174, 5, 208, 1)" />;
                 <Text style={styles.optionText}>Информация за мястото и времето</Text>
             </View>
       </View>
@@ -106,7 +107,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     paddingVertical: 14,
     alignItems: 'center',
-    marginTop: 110
+    marginTop: 100
   },
   txtBtn: {
     color: 'white',
