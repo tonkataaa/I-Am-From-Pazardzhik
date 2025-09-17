@@ -5,32 +5,31 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import InfoCard from '../../components/InfoCard';
 
 
-export default function OnBoardingScreen3() {
+export default function OnBoardingScreen4() {
 
     const navigation = useNavigation();
 
     return(
         <View style={styles.container}>
-        {/* Header */}
-        <View style={styles.header}>
-            <TouchableOpacity>
-            <Text style={styles.skipText}>Прескачане</Text>
-            </TouchableOpacity>
-        </View>
 
         {/* Main content */}
         <View style={styles.content}>
             <InfoCard
-            title={'Транспорт'}
-            subtitle={'Пътувайте лесно и удобно'}
-            description={'Актуални разписания на автобуси и тролеи.'}
-            imageSource={require('../../../../assets/onboardingthirdpicture.png')}
+            title={'Местни бизнеси'}
+            subtitle={'Намерете всичко от което се нуждаете'}
+            description={'Ресторанти, аптеки, автосервизи, фитнес зали и много други полезни контакти.'}
+            imageSource={require('../../../../assets/onboardingfourth.png')}
             />
 
         <View style={{ marginTop: 20, marginBottom: 30, width: '100%', alignItems: 'center' }}>
             <View style={styles.option}>
-                <FontAwesome name='bus' size={22} color="#00C950" />
-                <Text style={styles.optionText}>Актуални разписания</Text>
+                <FontAwesome name='bank' size={22} color="#FF6900" />
+                <Text style={styles.optionText}>Категории бизнеси</Text>
+            </View>
+
+            <View style={styles.option}>
+                <FontAwesome name='map-marker' size={22} color="#FF6900" />
+                <Text style={styles.optionText}>Контакти и работно време</Text>
             </View>
       </View>
 
@@ -50,13 +49,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#EFF6FF', 
     paddingTop: 60,
     paddingHorizontal: 20,
-  },
-  header: {
-    alignItems: 'flex-end',
-  },
-  skipText: {
-    color: '#6B7280', 
-    fontSize: 16,
   },
   content: {
     flex: 1,
@@ -107,7 +99,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     paddingVertical: 14,
     alignItems: 'center',
-    marginTop: 170
+    marginTop: 100
   },
   txtBtn: {
     color: 'white',

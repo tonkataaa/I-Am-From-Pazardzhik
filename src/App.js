@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import OnBoardingScreen1 from '../features/preApp/screens/onboarding/OnBoardingScreen1';
 import OnBoardingScreen2 from '../features/preApp/screens/onboarding/OnBoardingScreen2';
 import OnBoardingScreen3 from '../features/preApp/screens/onboarding/OnBoardingScreen3';
+import OnBoardingScreen4 from '../features/preApp/screens/onboarding/OnBoardingScreen4';
 
 
 const Stack = createNativeStackNavigator();
@@ -26,6 +27,11 @@ export default function App() {
           <Stack.Screen
             name='OnBoardingThird'
             component={OnBoardingScreen3}
+          />
+
+          <Stack.Screen
+            name='OnBoardingFourth'
+            component={OnBoardingScreen4}
           />
         </Stack.Navigator>
 
