@@ -5,7 +5,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import InfoCard from '../../components/InfoCard';
 
 
-export default function OnBoardingScreen2() {
+export default function OnBoardingScreen3() {
 
     const navigation = useNavigation();
 
@@ -21,26 +21,21 @@ export default function OnBoardingScreen2() {
         {/* Main content */}
         <View style={styles.content}>
             <InfoCard
-            title={'Събития и новини'}
-            subtitle={'Никога не пропускайте нищо важно'}
-            description={'Открийте концерти, театрални представления, спортни турнири и културни панаири във вашия град.'}
-            imageSource={require('../../../../assets/onboardingsecondPic.png')}
+            title={'Транспорт'}
+            subtitle={'Пътувайте лесно и удобно'}
+            description={'Актуални разписания на автобуси и тролеи.'}
+            imageSource={require('../../../../assets/onboardingthirdpicture.png')}
             />
 
         <View style={{ marginTop: 20, marginBottom: 30, width: '100%', alignItems: 'center' }}>
             <View style={styles.option}>
                 <FontAwesome name='calendar' size={22} color="rgba(174, 5, 208, 1)" />;
-                <Text style={styles.optionText}>Календар със събития</Text>
-            </View>
-
-            <View style={styles.option}>
-                <FontAwesome name='map-marker' size={22} color="rgba(174, 5, 208, 1)" />;
-                <Text style={styles.optionText}>Информация за мястото и времето</Text>
+                <Text style={styles.optionText}>Актуални разписания</Text>
             </View>
       </View>
 
             {/* Next button */}
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('OnBoardingThird')}>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('OnBoardingFirst')}>
             <Text style={styles.txtBtn}> Напред </Text>
             </TouchableOpacity>
         </View>
@@ -112,7 +107,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     paddingVertical: 14,
     alignItems: 'center',
-    marginTop: 100
+    marginTop: 170
   },
   txtBtn: {
     color: 'white',
