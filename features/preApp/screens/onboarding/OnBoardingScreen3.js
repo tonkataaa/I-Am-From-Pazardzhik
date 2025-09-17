@@ -29,7 +29,7 @@ export default function OnBoardingScreen3() {
 
         <View style={{ marginTop: 20, marginBottom: 30, width: '100%', alignItems: 'center' }}>
             <View style={styles.option}>
-                <FontAwesome name='calendar' size={22} color="rgba(174, 5, 208, 1)" />
+                <FontAwesome name='bus' size={22} color="#00C950" />
                 <Text style={styles.optionText}>Актуални разписания</Text>
             </View>
       </View>
