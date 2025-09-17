@@ -21,12 +21,24 @@ export default function OnBoardingScreen2() {
             imageSource={require('../../../../assets/onboardingsecondPic.png')}
             />
 
+        <View style={{ marginTop: 20, marginBottom: 30, width: '100%', alignItems: 'center' }}>
+            <View style={styles.option}>
+                {/* <Icon name="calendar-outline" size={22} color="#9b59b6" /> */}
+                <Text style={styles.optionText}>Календар със събития</Text>
+            </View>
+
+            <View style={styles.option}>
+                {/* <Icon name="location-outline" size={22} color="#9b59b6" /> */}
+                <Text style={styles.optionText}>Информация за мястото и времето</Text>
+            </View>
+      </View>
+
             {/* Next button */}
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('OnBoardingSecond')}>
             <Text style={styles.txtBtn}> Напред </Text>
             </TouchableOpacity>
         </View>
-        </View>
+    </View>
     )
 }
 
@@ -94,10 +106,29 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     paddingVertical: 14,
     alignItems: 'center',
-    marginTop: 250
+    marginTop: 110
   },
   txtBtn: {
     color: 'white',
     fontSize: 15,
-  }
+  },
+    option: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 12,
+    marginBottom: 10,
+    width: '90%',
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+    },
+    optionText: {
+    marginLeft: 12,
+    fontSize: 16,
+    color: '#333',
+    },
 });
