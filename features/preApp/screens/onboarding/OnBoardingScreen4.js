@@ -35,7 +35,7 @@ export default function OnBoardingScreen4() {
 
             {/* Next button */}
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('OnBoardingFourth')}>
-            <Text style={styles.txtBtn}> Напред </Text>
+            <Text style={styles.txtBtn}> Започни </Text>
             </TouchableOpacity>
         </View>
     </View>
