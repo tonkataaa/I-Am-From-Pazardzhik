@@ -1,6 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import OnBoardingScreen1 from '../features/preApp/screens/onboarding/OnBoardingScreen1';
 import OnBoardingScreen2 from '../features/preApp/screens/onboarding/OnBoardingScreen2';
@@ -17,7 +18,27 @@ export default function App() {
   
   function HomeTabs(){
     return(
-      <Tab.Navigator>
+      <Tab.Navigator
+        screenOptions={({ route }) => ({
+          tabBarIcon: ({ focused, color, size }) => {
+            let iconName;
+
+            if (route.name === 'Събития') {
+              iconName = focused
+                ? 'home'
+                : 'home';
+            } else if (route.name === 'Транспорт') {
+              iconName = focused ? 'bus' : 'bus';
+            } else if (route.name === 'Бизнес') {
+              iconName = focused ? 'storefront' : 'storefront';
+            }
+
+            return <Ionicons name={iconName} size={size} color={color} />;
+          },
+          tabBarActiveTintColor: 'green',
+          tabBarInactiveTintColor: 'grey',
+        })}
+      >
         <Tab.Screen name='Събития' component={EventsScreen} />
         <Tab.Screen name='Транспорт' component={TransportScreen} />
         <Tab.Screen name='Бизнес' component={BussinessScreen} />
