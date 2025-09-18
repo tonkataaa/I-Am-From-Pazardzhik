@@ -13,7 +13,7 @@ export default function OnBoardingScreen2() {
         <View style={styles.container}>
         {/* Header */}
         <View style={styles.header}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Home')} >
             <Text style={styles.skipText}>Прескачане</Text>
             </TouchableOpacity>
         </View>
