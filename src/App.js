@@ -39,9 +39,9 @@ export default function App() {
           tabBarInactiveTintColor: 'grey',
         })}
       >
-        <Tab.Screen name='Събития' component={EventsScreen} />
-        <Tab.Screen name='Транспорт' component={TransportScreen} />
-        <Tab.Screen name='Бизнес' component={BussinessScreen} />
+        <Tab.Screen name='Събития' component={EventsScreen} options={{headerShown: false}} />
+        <Tab.Screen name='Транспорт' component={TransportScreen} options={{headerShown: false}} />
+        <Tab.Screen name='Бизнес' component={BussinessScreen} options={{headerShown: false}} />
       </Tab.Navigator>
     );
   }
@@ -73,7 +73,6 @@ export default function App() {
           <Stack.Screen
             name='Home'
             component={HomeTabs}
-            options={{ headerShown: false }}
           />
 
         </Stack.Navigator>
