@@ -3,13 +3,13 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import OnBoardingScreen1 from '../features/preApp/screens/onboarding/OnBoardingScreen1';
-import OnBoardingScreen2 from '../features/preApp/screens/onboarding/OnBoardingScreen2';
-import OnBoardingScreen3 from '../features/preApp/screens/onboarding/OnBoardingScreen3';
-import OnBoardingScreen4 from '../features/preApp/screens/onboarding/OnBoardingScreen4';
-import EventsScreen from '../features/Home/screens/EventsScreen';
-import TransportScreen from '../features/Home/screens/TransportScreen';
-import BussinessScreen from '../features/Home/screens/BussinessScreen';
+import OnBoardingScreen1 from './features/preApp/screens/onboarding/OnBoardingScreen1';
+import OnBoardingScreen2 from './features/preApp/screens/onboarding/OnBoardingScreen2';
+import OnBoardingScreen3 from './features/preApp/screens/onboarding/OnBoardingScreen3';
+import OnBoardingScreen4 from './features/preApp/screens/onboarding/OnBoardingScreen4';
+import EventsScreen from './features/Home/screens/EventsScreen';
+import TransportScreen from './features/Home/screens/TransportScreen';
+import BussinessScreen from './features/Home/screens/BussinessScreen';
 
 
 export default function App() {

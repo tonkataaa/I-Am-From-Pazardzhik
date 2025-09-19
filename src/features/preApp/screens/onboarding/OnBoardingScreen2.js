@@ -24,7 +24,7 @@ export default function OnBoardingScreen2() {
             title={'Събития и новини'}
             subtitle={'Никога не пропускайте нищо важно'}
             description={'Открийте концерти, театрални представления, спортни турнири и културни панаири във вашия град.'}
-            imageSource={require('../../../../assets/onboardingsecondPic.png')}
+            imageSource={require('../../../../assets/icons/onboardingsecondPic.png')}
             />
 
         <View style={{ marginTop: 20, marginBottom: 30, width: '100%', alignItems: 'center' }}>

@@ -1,0 +1,131 @@
+import { View, Text, ScrollView ,TouchableOpacity, StyleSheet } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
+
+
+export default function EventsScreen(){
+return (
+    <View style={styles.container}>
+      {/* Custom Header */}
+      <View style={styles.header}>
+        <View>
+          <Text style={styles.headerTitle}>Събития</Text>
+          <Text style={styles.headerSubtitle}>2 събития днес</Text>
+        </View>
+
+        <View style={styles.headerRight}>
+          <TouchableOpacity style={styles.searchButton}>
+            <Icon name="search-outline" size={24} color="#333" />
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.filterButton}>
+            <Icon
+              name="options-outline"
+              size={18}
+              color="#333"
+              style={{ marginRight: 6 }}
+            />
+            <Text style={styles.filterText}>Филтри</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+
+      {/* Filter bar */}
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        style={styles.filterBar}
+      >
+        {['Всички', 'Днес', 'Музика', 'Спорт', 'Театър'].map((item, index) => (
+          <TouchableOpacity
+            key={index}
+            style={[
+              styles.chip,
+              index === 0 ? styles.chipActive : styles.chipInactive,
+            ]}
+          >
+            <Text
+              style={index === 0 ? styles.chipTextActive : styles.chipTextInactive}
+            >
+              {item}
+            </Text>
+          </TouchableOpacity>
+        ))}
+      </ScrollView>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+
+  // Header
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 16,
+    paddingTop: 20,          // ❗ по-надолу
+    paddingBottom: 14,       // малко по-голям spacing
+    borderBottomWidth: 1,
+    borderBottomColor: '#e0e0e0',
+  },
+  headerTitle: {
+    fontSize: 18,
+    fontWeight: '600',
+  },
+  headerSubtitle: {
+    fontSize: 12,
+    color: '#0077cc',
+    marginTop: 2,
+  },
+  headerRight: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  searchButton: {
+    marginRight: 16,
+  },
+  filterButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderWidth: 1,
+    borderColor: '#ddd',
+    borderRadius: 20,
+  },
+  filterText: {
+    fontSize: 14,
+    color: '#333',
+  },
+
+  // Filter bar
+  filterBar: {
+    paddingVertical: 8,
+    paddingHorizontal: 12,
+  },
+  chip: {
+    paddingHorizontal: 12,   // ❗ по-малки бутони
+    paddingVertical: 6,
+    borderRadius: 16,
+    marginRight: 6,
+  },
+  chipActive: {
+    backgroundColor: '#0066ff',
+  },
+  chipInactive: {
+    backgroundColor: '#f0f0f0',
+  },
+  chipTextActive: {
+    color: '#fff',
+    fontSize: 13,            // ❗ по-малък текст
+    fontWeight: '500',
+  },
+  chipTextInactive: {
+    color: '#333',
+    fontSize: 13,
+  },
+});
