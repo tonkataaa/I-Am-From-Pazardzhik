@@ -5,35 +5,19 @@ import Icon from 'react-native-vector-icons/Ionicons';
 export default function EventsScreen(){
 return (
     <View style={styles.container}>
-      {/* Custom Header */}
+      {/* Header */}
       <View style={styles.header}>
         <View>
           <Text style={styles.headerTitle}>Събития</Text>
           <Text style={styles.headerSubtitle}>2 събития днес</Text>
         </View>
 
-        <View style={styles.headerRight}>
-          <TouchableOpacity style={styles.searchButton}>
-            <Icon name="search-outline" size={24} color="#333" />
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.filterButton}>
-            <Icon
-              name="options-outline"
-              size={18}
-              color="#333"
-              style={{ marginRight: 6 }}
-            />
-            <Text style={styles.filterText}>Филтри</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
-
       {/* Filter bar */}
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
         style={styles.filterBar}
+        contentContainerStyle={{ flexDirection: 'row', alignItems: 'center' }}
       >
         {['Всички', 'Днес', 'Музика', 'Спорт', 'Театър'].map((item, index) => (
           <TouchableOpacity
@@ -51,6 +35,10 @@ return (
           </TouchableOpacity>
         ))}
       </ScrollView>
+      </View>
+
+      {/*Cards */}
+
     </View>
   );
 }
@@ -67,8 +55,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 16,
-    paddingTop: 20,          // ❗ по-надолу
-    paddingBottom: 14,       // малко по-голям spacing
+    paddingTop: 20,          
+    paddingBottom: 14,      
     borderBottomWidth: 1,
     borderBottomColor: '#e0e0e0',
   },
@@ -108,7 +96,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
   },
   chip: {
-    paddingHorizontal: 12,   // ❗ по-малки бутони
+    paddingHorizontal: 12,   
     paddingVertical: 6,
     borderRadius: 16,
     marginRight: 6,
@@ -121,7 +109,7 @@ const styles = StyleSheet.create({
   },
   chipTextActive: {
     color: '#fff',
-    fontSize: 13,            // ❗ по-малък текст
+    fontSize: 13,            
     fontWeight: '500',
   },
   chipTextInactive: {
