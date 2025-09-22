@@ -1,45 +1,60 @@
 import { View, Text, ScrollView ,TouchableOpacity, StyleSheet } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import EventCard from '../components/EventCard';
 
 
 export default function EventsScreen(){
 return (
-    <View style={styles.container}>
-      {/* Header */}
-      <View style={styles.header}>
-        <View>
-          <Text style={styles.headerTitle}>Събития</Text>
-          <Text style={styles.headerSubtitle}>2 събития днес</Text>
+  <ScrollView>
+
+
+      <View style={styles.container}>
+        {/* Header */}
+        <View style={styles.header}>
+          <View>
+            <Text style={styles.headerTitle}>Събития</Text>
+            <Text style={styles.headerSubtitle}>2 събития днес</Text>
+          </View>
+
+        {/* Filter bar */}
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          style={styles.filterBar}
+          contentContainerStyle={{ flexDirection: 'row', alignItems: 'center' }}
+        >
+          {['Всички', 'Днес', 'Музика', 'Спорт', 'Театър'].map((item, index) => (
+            <TouchableOpacity
+              key={index}
+              style={[
+                styles.chip,
+                index === 0 ? styles.chipActive : styles.chipInactive,
+              ]}
+            >
+              <Text
+                style={index === 0 ? styles.chipTextActive : styles.chipTextInactive}
+              >
+                {item}
+              </Text>
+            </TouchableOpacity>
+          ))}
+        </ScrollView>
         </View>
 
-      {/* Filter bar */}
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        style={styles.filterBar}
-        contentContainerStyle={{ flexDirection: 'row', alignItems: 'center' }}
-      >
-        {['Всички', 'Днес', 'Музика', 'Спорт', 'Театър'].map((item, index) => (
-          <TouchableOpacity
-            key={index}
-            style={[
-              styles.chip,
-              index === 0 ? styles.chipActive : styles.chipInactive,
-            ]}
-          >
-            <Text
-              style={index === 0 ? styles.chipTextActive : styles.chipTextInactive}
-            >
-              {item}
-            </Text>
-          </TouchableOpacity>
-        ))}
-      </ScrollView>
+        {/*Cards */}
+        <EventCard
+          title={'Концерт на Симфоничен оркестър'}
+          category={'Музика'}
+          date={'15 септември 2025'}
+          time={'19:00'}
+          place={'Дворец на културата'}
+          description={'Грандиозен концерт с класическа музика от световни композитори.'}
+        />
+        <EventCard/>
+        <EventCard/>
+        
+
       </View>
-
-      {/*Cards */}
-
-    </View>
+  </ScrollView>
   );
 }
 
