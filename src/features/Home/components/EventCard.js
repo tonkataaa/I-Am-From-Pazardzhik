@@ -44,7 +44,7 @@ export default function EventCard({title, category, date, time, place, descripti
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: "#fff",
+    backgroundColor: "#f5f4f4ff",
     borderRadius: 12,
     overflow: "hidden",
     marginVertical: 10,

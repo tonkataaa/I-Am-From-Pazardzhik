@@ -49,6 +49,7 @@ return (
           place={'Дворец на културата'}
           description={'Грандиозен концерт с класическа музика от световни композитори.'}
         />
+
         <EventCard/>
         <EventCard/>
         
@@ -74,6 +75,7 @@ const styles = StyleSheet.create({
     paddingBottom: 14,      
     borderBottomWidth: 1,
     borderBottomColor: '#e0e0e0',
+    marginTop: '23'
   },
   headerTitle: {
     fontSize: 18,
