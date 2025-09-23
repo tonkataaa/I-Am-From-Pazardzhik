@@ -50,10 +50,6 @@ return (
           description={'Грандиозен концерт с класическа музика от световни композитори.'}
         />
 
-        <EventCard/>
-        <EventCard/>
-        
-
       </View>
   </ScrollView>
   );
@@ -65,7 +61,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
 
-  // Header
   header: {
     flexDirection: 'row',
     alignItems: 'center',

@@ -25,12 +25,12 @@ export default function EventCard({title, category, date, time, place, descripti
         </View>
 
         <View style={styles.row}>
-          <Icon name="clock-outline" size={18} color="#555" />
+          <Icon name="time" size={18} color="#555" />
           <Text style={styles.rowText}>{time}</Text>
         </View>
 
         <View style={styles.row}>
-          <Icon name="map-marker-outline" size={18} color="#555" />
+          <Icon name="location" size={18} color="#555" />
           <Text style={styles.rowText}>{place}</Text>
         </View>
 
